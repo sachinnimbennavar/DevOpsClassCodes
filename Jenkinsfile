@@ -1,3 +1,8 @@
+properties([
+  pipelineTriggers([
+    [$class: 'SCMTrigger', scmpoll_spec: 'H/5 * * * *']  // Configure the polling interval as per your requirement
+  ])
+])
 pipeline{
 	agent any
       stages{
